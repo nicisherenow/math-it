@@ -1,0 +1,89 @@
+/* TODO Add site wide styles */
+
+* {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.game-board {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  animation: bgcolor 20s infinite;
+  animation-direction: alternate;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes bgcolor {
+  0% {
+      background-color: #45a3e5
+  }
+
+  30% {
+      background-color: #66bf39
+  }
+
+  60% {
+      background-color: #eb670f
+  }
+
+  90% {
+      background-color: #f35
+  }
+
+  100% {
+      background-color: #864cbf
+  }
+}
+
+.click-val {
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50vh;
+  left: 50vh;
+  width: fit-content;
+  min-width: 5vw;
+  height: 5vh;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button-target-1 {
+  width: fit-content;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.timer {
+  color: white;
+  font-weight: bold;
+}
+
+.timer-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  margin: auto;
+}
+
+.click-val-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
