@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router";
 import Home from "./Home";
-import ZenMode from "./ZenMode";
-import SpeedMode from "./SpeedMode";
-import Berserker from "./Berserker";
+import AdditionMode from "./AdditionMode";
 
 
 
@@ -19,14 +17,8 @@ function App() {
 
   return (
       <Switch>
-        <Route path={'/berserker'} exact={true}>
-          <Berserker />
-        </Route>
-        <Route path={'/zen-mode'} exact={true}>
-          <ZenMode />
-        </Route>
-        <Route path={'/speed-mode'} exact={true}>
-          <SpeedMode />
+        <Route path={'/addition'} exact={true}>
+          <AdditionMode />
         </Route>
         <Route path={'/'} exact={true}>
           <Home />

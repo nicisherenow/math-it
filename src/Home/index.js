@@ -11,27 +11,11 @@ export default function Home () {
         Have fun, for an additional challenge try speed mode. Or just enjoy yourself on the zen mode.
       </div>
       <div className="zen-mode-container">
-        <NavLink to='/zen-mode' className="zen-mode-button">
-          Zen Mode
+        <NavLink to='/addition' className="zen-mode-button">
+          Addition
         </NavLink>
         <div className="zen-mode-description">
-          In this mode, you can act at your leisure and feel free to take your time and calculate your most optimal move. If you get stuck on zen mode, just go ahead and click on the black dot to reroll your numbers.
-        </div>
-      </div>
-      <div className="speed-mode-container">
-        <NavLink to='/speed-mode' className="speed-mode-button">
-          Speed Mode
-        </NavLink>
-        <div className="speed-mode-description">
-          In this mode, the numbers will frolick around every couple of seconds and you can compete with yourself to see how quickly you can get above 10,000.
-        </div>
-      </div>
-      <div className="berserker-container">
-        <NavLink to='/berserker' className="berserker-button">
-          Berserker
-        </NavLink>
-        <div className="berserker-description">
-          Everything you loved from Speed Mode, just with a 1 second refresh as opposed to the 2 second.
+          Feel free to practice your addition here! It will choose two random numbers up to 100 and
         </div>
       </div>
       <div className="created-by">
