@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { act } from "react-dom/test-utils";
 import '../index.css'
 
 export default function AdditionMode() {
@@ -28,20 +29,14 @@ export default function AdditionMode() {
   const firstVariable = rand1()
   const secondVariable = rand2()
 
-  const answerVariable1 = randomAnswer1()
-  const answerVariable2 = randomAnswer2()
-  const answerVariable3 = randomAnswer3()
-  const answerVariable4 = randomAnswer4()
+  const answerVariable1 = 0
+  const answerVariable2 = 1
+  const answerVariable3 = 2
+  const answerVariable4 = 3
 
+  const [actualAnswer, setActualAnswer] = useState(firstVariable + secondVariable)
 
-  const equation = () => {
-    return firstVariable + secondVariable
-  }
-
-
-  const actualAnswer = equation()
-
-  const possibleAnswers = [actualAnswer, actualAnswer - 5, actualAnswer + 5, 'Answer not available']
+  const possibleAnswers = [actualAnswer, actualAnswer - Math.floor(Math.random() * actualAnswer), actualAnswer + Math.floor(Math.random() * actualAnswer), 'Answer not available']
 
   const equationToString = `${firstVariable} + ${secondVariable} ?`
 
@@ -53,18 +48,22 @@ export default function AdditionMode() {
 
   const compare = (e) => {
     e.preventDefault()
-    console.log(+answerGuess)
-    console.log(+actualAnswer)
-    console.log(+answerGuess === +actualAnswer)
+    rand1()
+    rand2()
     return +answerGuess === +actualAnswer
   }
+  useEffect(() => {
+    rand1()
+    rand2()
+    setActualAnswer(firstVariable + secondVariable)
+  }, [actualAnswer])
 
   useEffect(() => {
-    if(compare === true) {
-      setStreak(+currentStreak + 1)
+    if (+answerGuess === +actualAnswer) {
+      setStreak(currentStreak + 1)
+      setActualAnswer(firstVariable + secondVariable)
     }
-  }, [streak])
-
+  }, [streak, actualAnswer])
 
   return (
     <div>
