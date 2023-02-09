@@ -1,7 +1,6 @@
-# Click-it!
+# Math-it!
 
-## Welcome to Click-it!
+## Welcome to Math-it!
 
 ### The goal of this game:
-- Click the revolving numbers while they frolick about, try and get over 10000 as fast as possible! Enjoy!
-# math-it
+- Click on which form of math you would like to practice, select the correct answer! See how high you can get your streak. Enjoy!
