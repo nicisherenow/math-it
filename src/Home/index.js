@@ -33,6 +33,14 @@ export default function Home () {
           Feel free to practice your multiplication here! It will choose two random numbers up to 12.
         </div>
       </div>
+      <div className="zen-mode-container">
+        <NavLink to='/division' className="zen-mode-button">
+          Division
+        </NavLink>
+        <div className="zen-mode-description">
+          Feel free to practice your multiplication here! It will choose two random numbers up to 12.
+        </div>
+      </div>
       <div className="created-by">
         <div>Created by: </div>
         <a href='https://github.com/nicisherenow'>Github</a>

@@ -2,7 +2,7 @@ import { useState } from "react"
 import '../index.css'
 
 export default function SubtractionMode() {
-  const [answerGuess, setAnswerGuess] = useState(0)
+  const [, setAnswerGuess] = useState(0)
   const [streak, setStreak] = useState(0)
 
   let firstVariable = Math.floor(Math.random() * 100)
@@ -27,8 +27,8 @@ export default function SubtractionMode() {
   }
 
   return (
-    <div>
-      <span className="streak-style">{streak}</span>
+    <div className="game-board">
+      <span className="streak-style">Streak: {streak}</span>
       <h1 className="equation-style">{equationToString}</h1>
       {answerOptions.map((option, i) => (
         <button className={`button-${i}`} key={i} onClick={() => handleClick(option)}>

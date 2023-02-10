@@ -4,6 +4,7 @@ import Home from "./Home";
 import AdditionMode from "./AdditionMode";
 import SubtractionMode from "./SubtractionMode";
 import MultiplicationMode from "./MultiplicationMode";
+import DivisionMode from "./DivisionMode";
 
 
 
@@ -19,6 +20,9 @@ function App() {
 
   return (
       <Switch>
+        <Route path={'/division'} exact={true}>
+          <DivisionMode />
+        </Route>
         <Route path={'/multiplication'} exact={true}>
           <MultiplicationMode />
         </Route>

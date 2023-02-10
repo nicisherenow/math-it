@@ -1,18 +1,18 @@
 import { useState } from "react";
 import '../index.css'
 
-export default function AdditionMode() {
+export default function DivisionMode() {
   const [, setAnswerGuess] = useState(0);
   const [streak, setStreak] = useState(0);
 
-  let firstVariable = Math.floor(Math.random() * 100);
-  let secondVariable = Math.floor(Math.random() * 100);
-  const actualAnswer = firstVariable + secondVariable;
-  const equationToString = `${firstVariable} + ${secondVariable} ?`;
+  let firstVariable = Math.floor(Math.random() * 200 + 1);
+  let secondVariable = Math.floor(Math.random() * 12 + 1);
+  const actualAnswer = firstVariable > secondVariable ? firstVariable / secondVariable : secondVariable / firstVariable
+  const equationToString = firstVariable > secondVariable ? `${firstVariable} / ${secondVariable} ?` : `${secondVariable} / ${firstVariable} ?`
 
   const answerOptions = [];
   for (let i = 0; i < 5; i++) {
-    answerOptions.push(Math.floor(Math.random() * 200));
+    answerOptions.push(Math.floor(Math.random() * 40));
   }
   answerOptions[Math.floor(Math.random() * 5)] = actualAnswer;
 

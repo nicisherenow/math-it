@@ -91,3 +91,93 @@ body {
 button {
   cursor: pointer;
 }
+
+.equation-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-0 {
+  position: fixed;
+  left: 20vw;
+  top: 40vh;
+  background-color: black;
+  border-radius: 1rem;
+  border: none;
+  width: fit-content;
+  padding: 10px;
+  animation: fscolor 20s infinite;
+  animation-direction: alternate;
+  margin-bottom: 10px;
+}
+
+.button-1 {
+  position: fixed;
+  left: 80vw;
+  top: 40vh;
+  background-color: black;
+  border-radius: 1rem;
+  border: none;
+  width: fit-content;
+  padding: 10px;
+  animation: fscolor 20s infinite;
+  animation-direction: alternate;
+  margin-bottom: 10px;
+}
+
+.button-2 {
+  position: fixed;
+  left: 50vw;
+  top: 15vh;
+  background-color: black;
+  border-radius: 1rem;
+  border: none;
+  width: fit-content;
+  padding: 10px;
+  animation: fscolor 20s infinite;
+  animation-direction: alternate;
+  margin-bottom: 10px;
+}
+
+.button-3 {
+  position: fixed;
+  left: 35vw;
+  top: 75vh;
+  background-color: black;
+  border-radius: 1rem;
+  border: none;
+  width: fit-content;
+  padding: 10px;
+  animation: fscolor 20s infinite;
+  animation-direction: alternate;
+  margin-bottom: 10px;
+}
+
+.button-4 {
+  position: fixed;
+  left: 65vw;
+  top: 75vh;
+  background-color: black;
+  border-radius: 1rem;
+  border: none;
+  width: fit-content;
+  padding: 10px;
+  animation: fscolor 20s infinite;
+  animation-direction: alternate;
+  margin-bottom: 10px;
+}
+
+.streak-style {
+  position: fixed;
+  left: 48vw;
+  top: 5vh;
+  color: white;
+}
+
+.equation-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
