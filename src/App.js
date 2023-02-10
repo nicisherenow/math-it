@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router";
 import Home from "./Home";
 import AdditionMode from "./AdditionMode";
+import SubtractionMode from "./SubtractionMode";
+import MultiplicationMode from "./MultiplicationMode";
 
 
 
@@ -17,6 +19,12 @@ function App() {
 
   return (
       <Switch>
+        <Route path={'/multiplication'} exact={true}>
+          <MultiplicationMode />
+        </Route>
+        <Route path={'/subtraction'} exact={true}>
+          <SubtractionMode />
+        </Route>
         <Route path={'/addition'} exact={true}>
           <AdditionMode />
         </Route>
