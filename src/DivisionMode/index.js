@@ -7,8 +7,17 @@ export default function DivisionMode() {
 
   let firstVariable = Math.floor(Math.random() * 200 + 1);
   let secondVariable = Math.floor(Math.random() * 12 + 1);
-  const actualAnswer = firstVariable > secondVariable ? firstVariable / secondVariable : secondVariable / firstVariable
-  const equationToString = firstVariable > secondVariable ? `${firstVariable} / ${secondVariable} ?` : `${secondVariable} / ${firstVariable} ?`
+
+  if (firstVariable % secondVariable !== 0) {
+    let newSecondVariable = secondVariable;
+    while (firstVariable % newSecondVariable !== 0) {
+      newSecondVariable--;
+    }
+    secondVariable = newSecondVariable;
+  }
+  
+  const actualAnswer = firstVariable / secondVariable
+  const equationToString = `${firstVariable} / ${secondVariable} ?`
 
   const answerOptions = [];
   for (let i = 0; i < 5; i++) {
